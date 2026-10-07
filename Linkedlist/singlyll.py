@@ -1,0 +1,72 @@
+# #singly linear linked list
+# class Node:
+#     def __init__(self,val):
+#         self.data=val
+#         self.next=None
+
+# class LinkedList:
+#     def __init__(self):
+#         self.head=None
+#     def append(self,new_node):
+#         if(self.head==None):
+#            self.head=new_node
+#         else:
+#             temp=self.head
+#             while(temp.next):
+#                 temp=temp.next
+#             temp.next=new_node #appending new node
+#     def display(self):
+#         sum=0
+#         temp=self.head
+#         while temp:
+#             if temp.data>0:
+#                 sum+=temp.data      
+#             temp=temp.next
+#         print(sum)
+# l1=LinkedList()
+# n1=Node(10)
+# n2=Node(-20)       
+# n3=Node(30)
+# l1.append(n1)
+# l1.append(n2)
+# l1.append(n3)
+# l1.append(Node(-40))
+# l1.display()
+
+
+
+#singly linear linked list to print alternate nodes
+class Node:
+    def __init__(self,val):
+        self.data=val
+        self.next=None
+
+class LinkedList:
+    def __init__(self):
+        self.head=None
+    def append(self,new_node):
+        if(self.head==None):
+           self.head=new_node
+        else:
+            temp=self.head
+            while(temp.next):
+                temp=temp.next
+            temp.next=new_node #appending new node
+    def display(self):
+        temp=self.head
+        while temp.next:
+            print(temp.data)
+            temp=temp.next.next
+        if temp:
+            print(temp.data)
+l1=LinkedList()
+n1=Node(10)
+n2=Node(-20)       
+n3=Node(30)
+n4=Node(50)
+l1.append(n1)
+l1.append(n2)
+l1.append(n3)
+l1.append(n4)
+l1.append(Node(-40))
+l1.display()
